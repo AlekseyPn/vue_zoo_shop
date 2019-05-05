@@ -12,7 +12,7 @@
         <header>
             <div class="navbar navbar-default">
                 <div class="navbar-header">
-                    <h1>{{ sitename }}</h1>
+                    <h1>{{ siteName }}</h1>
                 </div>
             </div>
         </header>
@@ -32,21 +32,21 @@
         </main>
     </div>
     <script type="text/javascript">
-        let webstore;
-        webstore = new Vue({
+        let webStore;
+        webStore = new Vue({
             el: '#app',
             data: {
-                sitename: "Vue.js Pet Depot",
-                product: {	//#A
-                    id: 1001,     	//#B
-                    title: "Cat Food, 25lb bag",	//#B
-                    description: "A 25 pound bag of <em>irresistible</em>," + "organic goodness for your cat.",	//#B
-                    price: 2000,	//#B
-                    image: "assets/images/product-fullsize.png"	//#B
+                siteName: "Vue.js Pet Depot",
+                product: {
+                    id: 1001,
+                    title: "Cat Food, 25lb bag",
+                    description: "A 25 pound bag of <em>irresistible</em>," + "organic goodness for your cat.",
+                    price: 2000,
+                    image: "assets/images/product-fullsize.png"
                 },
             },
             filters: {
-                formatPrice: function (price) {
+                formatPrice(price) {
                     if (!parseInt(price)) return "";
                     if (price > 99999) {
                         const priceString = (price / 100).toFixed(2);
